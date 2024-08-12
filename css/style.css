@@ -2,17 +2,31 @@
 
 body{
     font-family: "Roboto";
+}
+
+.videos{
     background-color: #F7F7F7;
-    margin: 35px;
-    width: 900px;
+    display: grid;
+    grid-gap: 15px;
+    padding: 35px;
+    max-width: 900px;
+    grid-template-areas: "principal publicidade"
+                         "principal destaque";
+    grid-template-columns: 1fr 270px;
+    grid-template-rows: 56px 1fr;
 }
 
 .container .container-titulo {
     font-size: 18px;
+    margin: 12px 0 7px 0; 
 }
 
-.imagem-maior {
+.container img {
     width: 100%;
+}
+
+.container .container-visualizacao {
+    margin-bottom: 9px;
 }
 
 .container .container-visualizacao, .container-titulo-lateral {
@@ -28,9 +42,8 @@ body{
     flex-direction: column;
 }
 
-.container-lateral .youtube {
-    display: flex;
-    margin-bottom: 15px;
+.infos {
+    margin-left: 4px;
 }
 
 .container-lateral .container-ator, .container-visualizacao-lateral, .container-tempo{
@@ -38,14 +51,12 @@ body{
     font-weight: 300;
 }
 
-.videos{
-    display: grid;
-    grid-gap: 15px;
-    grid: 
-    "principal principal publicidade"
-    "principal principal destaque-1"
-    "principal principal destaque-2"
-    "principal principal destaque-3"
+.container-lateral .container-ator, .container-visualizacao-lateral {
+    margin-bottom: 5px;
+}
+
+.container-titulo-lateral {
+    margin-bottom: 7px;
 }
 
 .container {
@@ -56,14 +67,8 @@ body{
     grid-area: publicidade;
 }
 
-.destaque-1 {
-    grid-area: destaque-1;
-}
-
-.destaque-2 {
-    grid-area: destaque-2;
-}
-
-.destaque-3 {
-    grid-area: destaque-3;
+.destaque {
+    grid-area: destaque;
+    display: flex;
+    margin-bottom: 15px;
 }
